@@ -79,6 +79,6 @@ public class TestWebForm {
 
     @After
     public void setEnd(){
-        //driver.quit();
+        driver.quit();
     }
 }
