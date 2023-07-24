@@ -28,20 +28,20 @@ public class MainPageForm {
     private static final By DATE_OF_BIRTH_FIELD = By.xpath("//div/input[@id='dateOfBirthInput']");// поле ввода
     private static final By SELECT_MONT_MENU = By.xpath("//select[@class='react-datepicker__month-select']");// меню выбора месяца
     private static final By SELECT_MONT = By.xpath("//select[@class='react-datepicker__month-select']/option[@value=0]"); // выбор месяца Январь
-    public static final By SELECT_DAY = By.xpath("//div[1]/div[text()='1']");//выбор даты
-    public static final By SELECT_YEAR_MENU = By.xpath("//select[@class='react-datepicker__year-select']");// меню выбора года
-    public static final By SELECT_YEAR = By.xpath("//select/option[@value='1992']");// выбор года 1992
-    public static final By SUBJECTS_FIELD_FOR_CLICK = By.cssSelector("#subjectsContainer > div > div.subjects-auto-complete__value-container.subjects-auto-complete__value-container--is-multi.css-1hwfws3");//выбор поля SUBJECTS по клику
-    public static final By SUBJECTS_FIELD_FOR_INPUT = By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div[2]/form/div[6]/div[2]/div/div/div[1]/div/div/input");// поле ввода SUBJECTS
-    public static final By SUBJECTS_ENGLISH = By.xpath("//div/div[@id='react-select-2-option-0']");// выбор предмета English
-    public static final By HOBBIES_CHECKBOX_SPORTS = By.xpath("//label[text()='Sports']"); // чек-бокс на Sports
-    public static final By FILE_UPLOAD_BUTTON = By.xpath("//input[@id='uploadPicture']"); // кнапка загрузки файла
-    public static final By CURRENT_ADDRESS_FIELD = By.xpath("//textarea[@placeholder='Current Address']"); // поле ввода Current Address
-    public static final By STATE_DROP = By.cssSelector("#state > div > div.css-1wy0on6 > div"); // выбор выпадающего меню State
-    public static final By STATE_SELECT = By.xpath("//div/div[@id='react-select-3-option-0']");// выбор State
-    public static final By City_DROP = By.cssSelector("#city > div > div.css-1wy0on6 > div > svg");//выбор выпадающего City
-    public static final By City_SELECT = By.cssSelector("#react-select-4-option-1"); // выбор City
-    public static final By SUBMIT_BUTTON = By.cssSelector("#submit"); // кнопка SUBMIT
+    private static final By SELECT_DAY = By.xpath("//div[1]/div[text()='1']");//выбор даты
+    private static final By SELECT_YEAR_MENU = By.xpath("//select[@class='react-datepicker__year-select']");// меню выбора года
+    private static final By SELECT_YEAR = By.xpath("//select/option[@value='1992']");// выбор года 1992
+    private static final By SUBJECTS_FIELD_FOR_CLICK = By.cssSelector("#subjectsContainer > div > div.subjects-auto-complete__value-container.subjects-auto-complete__value-container--is-multi.css-1hwfws3");//выбор поля SUBJECTS по клику
+    private static final By SUBJECTS_FIELD_FOR_INPUT = By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div[2]/form/div[6]/div[2]/div/div/div[1]/div/div/input");// поле ввода SUBJECTS
+    private static final By SUBJECTS_ENGLISH = By.xpath("//div/div[@id='react-select-2-option-0']");// выбор предмета English
+    private static final By HOBBIES_CHECKBOX_SPORTS = By.xpath("//label[text()='Sports']"); // чек-бокс на Sports
+    private static final By FILE_UPLOAD_BUTTON = By.xpath("//input[@id='uploadPicture']"); // кнапка загрузки файла
+    private static final By CURRENT_ADDRESS_FIELD = By.xpath("//textarea[@placeholder='Current Address']"); // поле ввода Current Address
+    private static final By STATE_DROP = By.cssSelector("#state > div > div.css-1wy0on6 > div"); // выбор выпадающего меню State
+    private static final By STATE_SELECT = By.xpath("//div/div[@id='react-select-3-option-0']");// выбор State
+    private static final By City_DROP = By.cssSelector("#city > div > div.css-1wy0on6 > div > svg");//выбор выпадающего City
+    private static final By City_SELECT = By.cssSelector("#react-select-4-option-1"); // выбор City
+    private static final By SUBMIT_BUTTON = By.cssSelector("#submit"); // кнопка SUBMIT
 
 
 
