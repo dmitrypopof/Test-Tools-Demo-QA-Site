@@ -30,7 +30,6 @@ public class MainPageForm {
     private static final By SELECT_MONT = By.xpath("//select[@class='react-datepicker__month-select']/option[@value=0]"); // выбор месяца Январь
     private static final By SELECT_DAY = By.xpath("//div[1]/div[text()='1']");//выбор даты
     private static final By SELECT_YEAR_MENU = By.xpath("//select[@class='react-datepicker__year-select']");// меню выбора года
-    private static final By SELECT_YEAR = By.xpath("//select/option[@value='1992']");// выбор года 1992
     private static final By SUBJECTS_FIELD_FOR_CLICK = By.cssSelector("#subjectsContainer > div > div.subjects-auto-complete__value-container.subjects-auto-complete__value-container--is-multi.css-1hwfws3");//выбор поля SUBJECTS по клику
     private static final By SUBJECTS_FIELD_FOR_INPUT = By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div[2]/form/div[6]/div[2]/div/div/div[1]/div/div/input");// поле ввода SUBJECTS
     private static final By SUBJECTS_ENGLISH = By.xpath("//div/div[@id='react-select-2-option-0']");// выбор предмета English
