@@ -97,7 +97,7 @@ public class MainPageForm {
     }
 
     @Step("Ввод Date of Birth")
-    public void inputDateOfBirth(){
+    public String inputDateOfBirth(String year){
         driver.findElement(DATE_OF_BIRTH_FIELD).click();
         new WebDriverWait(driver, Duration.ofSeconds(2))
                 .until(ExpectedConditions.elementToBeClickable(SELECT_MONT_MENU));
@@ -105,8 +105,9 @@ public class MainPageForm {
         driver.findElement(SELECT_MONT).click();
 
         driver.findElement(SELECT_YEAR_MENU).click();
-        driver.findElement(SELECT_YEAR).click();
+        driver.findElement(By.xpath("//select/option[@value='"+year+"']")).click();
         driver.findElement(SELECT_DAY).click();
+        return year;
     }
 
     @Step("Ввод Subjects")

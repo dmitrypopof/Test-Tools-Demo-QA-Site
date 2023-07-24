@@ -20,15 +20,17 @@ public class TestWebForm {
     private final String FIRST_NAME;// ввод номера в поле First Name
     private final String LAST_NAME; // ввод номера в поле Last Name
     private final String EMAIL;// ввод номера в поле Email
+    private final String YEAR;// год рождения
     private final String CURRENT_ADDRESS;// ввод адреса в поле Current Address
     private final String PATH_FOR_UPLOAD_FILE;// путь к файлу для загрузки
 
-    public TestWebForm(String INPUT_SUBJECTS, String MOBILE_NUMBER, String FIRST_NAME, String LAST_NAME, String EMAIL, String CURRENT_ADDRESS, String PATH_FOR_UPLOAD_FILE) {
+    public TestWebForm(String INPUT_SUBJECTS, String MOBILE_NUMBER, String FIRST_NAME, String LAST_NAME, String EMAIL, String YEAR, String CURRENT_ADDRESS, String PATH_FOR_UPLOAD_FILE) {
         this.INPUT_SUBJECTS = INPUT_SUBJECTS;
         this.MOBILE_NUMBER = MOBILE_NUMBER;
         this.FIRST_NAME = FIRST_NAME;
         this.LAST_NAME = LAST_NAME;
         this.EMAIL = EMAIL;
+        this.YEAR = YEAR;
         this.CURRENT_ADDRESS = CURRENT_ADDRESS;
         this.PATH_FOR_UPLOAD_FILE = PATH_FOR_UPLOAD_FILE;
     }
@@ -36,7 +38,7 @@ public class TestWebForm {
     @Parameterized.Parameters
     public static Object[][] getData(){
         return new Object[][]{
-                {"English","8002000700","Федор","Достоевский","dostoevsky@mail.com","Санкт-Петербург, Набережная Фонтанки, 103","C:\\Users\\dmitr\\IdeaProjects\\ATOLLis\\Site-demo-qa\\src\\main\\resources\\test_picture.png"},
+                {"English","8002000700","Федор","Достоевский","dostoevsky@mail.com","1992","Санкт-Петербург, Набережная Фонтанки, 103","C:\\Users\\dmitr\\IdeaProjects\\ATOLLis\\Site-demo-qa\\src\\main\\resources\\test_picture.png"},
         };
     }
 
@@ -62,7 +64,7 @@ public class TestWebForm {
         page.inputEmail(EMAIL);
         page.inputGender();
         page.inputMobNumber(MOBILE_NUMBER);
-        page.inputDateOfBirth();
+        page.inputDateOfBirth(YEAR);
         page.inputSubjects(INPUT_SUBJECTS);
         page.inputHobbies();
         page.inputPictures(PATH_FOR_UPLOAD_FILE);
