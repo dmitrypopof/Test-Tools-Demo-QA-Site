@@ -12,8 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 
 @RunWith(Parameterized.class)
-public class TestWebForm {
-    private WebDriver driver;
+public class TestWebForm extends BaseTest{
 
     private final String INPUT_SUBJECTS;// ввод в поле Subjects
     private final String MOBILE_NUMBER;// ввод номера в поле Mobile Number
@@ -46,14 +45,6 @@ public class TestWebForm {
     @DisplayName("Заполнение формы")
     @Description("Проверка успешной отправки формы")
     public void testForm(){
-        ChromeDriverService service = new ChromeDriverService.Builder() // исправление  getLogOutput INFO: Driver logs no longer sent to console by default error using Selenium Java
-                .withLogOutput(System.out) // вывод логов в консоль
-                //.withLogLevel(ChromiumDriverLogLevel.INFO) // указываем уровень журнала ALL,INFO,DEBUG
-                .build();
-
-        driver = new ChromeDriver(service);
-        driver.manage().window().setSize(new Dimension(1920,1080)); //
-
         MainPageForm page = new MainPageForm(driver);
 
         page.open();
@@ -67,7 +58,7 @@ public class TestWebForm {
         page.inputDateOfBirth(YEAR);
         page.inputSubjects(INPUT_SUBJECTS);
         page.inputHobbies();
-        page.inputPictures(PATH_FOR_UPLOAD_FILE);
+        page.inputPictures(PATH_FOR_UPLOAD_FILE);//падение теста
         page.inputCurrentAddress(CURRENT_ADDRESS);
         page.inputState();
         page.inputCity();
@@ -77,10 +68,5 @@ public class TestWebForm {
         System.out.println(actual);
         Assert.assertEquals(expected,actual);
 
-    }
-
-    @After
-    public void setEnd(){
-        driver.quit();
     }
 }
