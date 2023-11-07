@@ -1,15 +1,10 @@
 import com.demoqa.model.MainPageForm;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
 
 @RunWith(Parameterized.class)
 public class TestWebForm extends BaseTest{
@@ -33,11 +28,17 @@ public class TestWebForm extends BaseTest{
         this.CURRENT_ADDRESS = CURRENT_ADDRESS;
         this.PATH_FOR_UPLOAD_FILE = PATH_FOR_UPLOAD_FILE;
     }
+    // Получение абсолютного пути к директории проекта
+    private static String projectPath = System.getProperty("user.dir");
+
+    // Конвертация относительного пути в абсолютный путь
+    private static String relativePath = "src/main/resources/data/test_picture.png";
+    private static final String absolutePath = projectPath + "/" + relativePath;
 
     @Parameterized.Parameters
     public static Object[][] getData(){
         return new Object[][]{
-                {"English","8002000700","Федор","Достоевский","dostoevsky@mail.com","1992","Санкт-Петербург, Набережная Фонтанки, 103","C:\\Users\\dmitr\\IdeaProjects\\ATOLLis\\Site-demo-qa\\src\\main\\resources\\test_picture.png"},
+                {"English","8002000700","Федор","Достоевский","dostoevsky@mail.com","1992","Санкт-Петербург, Набережная Фонтанки, 103", absolutePath},
         };
     }
 

@@ -34,13 +34,13 @@ public class MainPageForm {
     private static final By SUBJECTS_FIELD_FOR_INPUT = By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div[2]/form/div[6]/div[2]/div/div/div[1]/div/div/input");// поле ввода SUBJECTS
     private static final By SUBJECTS_ENGLISH = By.xpath("//div/div[@id='react-select-2-option-0']");// выбор предмета English
     private static final By HOBBIES_CHECKBOX_SPORTS = By.xpath("//label[text()='Sports']"); // чек-бокс на Sports
-    private static final By FILE_UPLOAD_BUTTON = By.xpath("//input[@id='uploadPicture']"); // кнапка загрузки файла
+    private static final By FILE_UPLOAD_BUTTON = By.id("uploadPicture"); // кнапка загрузки файла
     private static final By CURRENT_ADDRESS_FIELD = By.xpath("//textarea[@placeholder='Current Address']"); // поле ввода Current Address
     private static final By STATE_DROP = By.cssSelector("#state > div > div.css-1wy0on6 > div"); // выбор выпадающего меню State
     private static final By STATE_SELECT = By.xpath("//div/div[@id='react-select-3-option-0']");// выбор State
     private static final By City_DROP = By.cssSelector("#city > div > div.css-1wy0on6 > div > svg");//выбор выпадающего City
     private static final By City_SELECT = By.cssSelector("#react-select-4-option-1"); // выбор City
-    private static final By SUBMIT_BUTTON = By.cssSelector("#submit"); // кнопка SUBMIT
+    private static final By SUBMIT_BUTTON = By.id("submit"); // кнопка SUBMIT
 
 
 
@@ -126,7 +126,7 @@ public class MainPageForm {
         return inputSubjects;
 
     }
-
+//
     @Step("Выбор Hobbies")
     public void inputHobbies(){
         driver.findElement(HOBBIES_CHECKBOX_SPORTS).click();
@@ -173,8 +173,7 @@ public class MainPageForm {
     @Step("Клик по кнопке Submit")
     public void clickSubmitButton(){
         WebElement SubmitBut = driver.findElement(SUBMIT_BUTTON);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", SubmitBut);
-        driver.findElement(SUBMIT_BUTTON).click();
+        SubmitBut.click();
     }
 
     @Step("Сообщение об успешной отправке формы")
